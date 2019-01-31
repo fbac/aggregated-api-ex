@@ -5,5 +5,12 @@
   "description": "Aggregated API example",
   "scripts": {
     "start": "node --use_strict server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "morgan": "^1.8.2"
   }
 }
