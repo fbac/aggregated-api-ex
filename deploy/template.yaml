@@ -99,4 +99,4 @@ objects:
         from:
           kind: ImageStreamTag
           name: aggregated-api-ex:latest
-        type: ImageChange
+      type: ImageChange
