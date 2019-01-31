@@ -1,16 +1,22 @@
-const 	https = require('https'),
-        express = require('express'),
-        morgan = require('morgan'),
-	os = require('os');
+const bodyParser = require('body-parser'),
+      express    = require('express'),
+      fs         = require('fs'),
+      https      = require('https'),
+      morgan     = require('morgan');
 
-var hostname = os.hostname();
-	
+// server instance and middlewares
 var app = express();
 app.use(morgan('dev'));
 
-// health check
+var hostname = os.hostname();
+
+// health check for readiness
 app.get('/health', (req, res) => {
-  console.log('healthz queried')
+  res.status(200).end();
+});
+
+// process POST
+app.post('/', (req, res) => {
   res.status(200).end();
 });
 
