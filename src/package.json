@@ -2,5 +2,8 @@
   "name": "aggregated-api-ex",
   "version": "0.0.1",
   "main": "server.js",
-  "description": "Aggregated API example"
+  "description": "Aggregated API example",
+  "scripts": {
+    "start": "node --use_strict server.js"
+  },
 }
