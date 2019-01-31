@@ -5,6 +5,9 @@ const 	https = require('https'),
 
 var hostname = os.hostname();
 	
+var app = express();
+app.use(morgan('dev'));
+
 // health check
 app.get('/health', (req, res) => {
   console.log('healthz queried')
