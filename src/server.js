@@ -1,5 +1,6 @@
 const 	https = require('https'),
         express = require('express'),
+        morgan = require('morgan'),
 	os = require('os');
 
 var hostname = os.hostname();
