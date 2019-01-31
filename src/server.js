@@ -2,6 +2,7 @@ const bodyParser = require('body-parser'),
       express    = require('express'),
       fs         = require('fs'),
       https      = require('https'),
+      os         = require('os'),
       morgan     = require('morgan');
 
 // server instance and middlewares
