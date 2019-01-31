@@ -19,7 +19,7 @@ app.get('/health', (req, res) => {
 
 // simple api handler
 app.get('/apis/test.k8s.io/v1beta1', (req, res) => {
-  res.status(200).end("ECHENIQUE-TRON 2000 API");
+  res.status(200).end("Test API response\n");
 });
 
 // this handler will return the hostname
