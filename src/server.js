@@ -22,8 +22,8 @@ app.post('/', (req, res) => {
 });
 
 // simple api
-app.get('/hostname', (req, res) => {
-  res.status(200).end(hostname);
+app.get('/apis/test.k8s.io/v1beta1', (req, res) => {
+  res.status(200).end("ECHENIQUE-TRON 2000 API");
 });
 
 // server
