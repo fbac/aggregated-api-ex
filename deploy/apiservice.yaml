@@ -1,0 +1,15 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: onstart
+  name: API_NAME
+spec:
+  caBundle: CA_BUNDLE
+  group: API_GROUP
+  groupPriorityMinimum: 17100
+  service: 
+    name: SVC
+    namespace: NS
+  version: VERSION
+  versionPriority: 9
