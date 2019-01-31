@@ -24,7 +24,7 @@ app.post('/', (req, res) => {
 // simple api
 app.get('/hostname', (req, res) => {
   console.log('hostname queried')
-  response.status(200).end(hostname);
+  res.status(200).end(hostname);
 });
 
 // server
