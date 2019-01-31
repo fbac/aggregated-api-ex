@@ -9,6 +9,7 @@ const bodyParser = require('body-parser'),
 var app = express();
 app.use(morgan('dev'));
 
+// return hostname where pod is deployed
 var hostname = os.hostname();
 
 // health check for readiness
@@ -16,14 +17,14 @@ app.get('/health', (req, res) => {
   res.status(200).end();
 });
 
-// process POST
-app.post('/', (req, res) => {
-  res.status(200).end();
-});
-
-// simple api
+// simple api handler
 app.get('/apis/test.k8s.io/v1beta1', (req, res) => {
   res.status(200).end("ECHENIQUE-TRON 2000 API");
+});
+
+// this handler will return the hostname
+app.get('/apis/test.k8s.io/v1beta1', (req, res) => {
+  res.status(200).end(hostname);
 });
 
 // server
