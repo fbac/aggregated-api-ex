@@ -23,7 +23,7 @@ app.get('/apis/test.k8s.io/v1beta1', (req, res) => {
 });
 
 // this handler will return the hostname
-app.get('/apis/test.k8s.io/v1beta1', (req, res) => {
+app.get('/apis/test.k8s.io/v1beta1/host', (req, res) => {
   res.status(200).end(hostname);
 });
 
